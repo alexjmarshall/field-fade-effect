@@ -1,8 +1,8 @@
-.container {
+.fade-container {
   width: 10rem;
   padding-right: 1rem;
 }
-input[type=text] {
+.fade-field {
   width: 100%; 
 }
 .overflow-fade-left, .overflow-fade-right{
@@ -16,7 +16,7 @@ input[type=text] {
   content: '';
   position: absolute;
   pointer-events: none;
-  top: 0.1875rem;   
+  top: 0.167rem;   
   width: 15%;
   height: 1rem;
 }
