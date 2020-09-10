@@ -1,21 +1,10 @@
-.fade-overlay {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
+.container {
+  width: 10rem;
+  padding-right: 1rem;
 }
-.fade-overlay:after {
-  white-space: nowrap;
-  overflow: hidden;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -.5rem;
-  width: 10%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #FFFFFF 80%, #FFFFFF 100%);
-  pointer-events: none;
+input[type=text] {
+  width: 100%; 
 }
-/**input overflow text fade out*/
 .overflow-fade-left, .overflow-fade-right{
   overflow: hidden;
   white-space: nowrap;
@@ -28,19 +17,14 @@
   position: absolute;
   pointer-events: none;
   top: 0.1875rem;   
-  width: 10%;
-  height: 2.5rem;
+  width: 15%;
+  height: 1rem;
 }
-/*color set between white and light gray to handle both selected and unselected input fields*/
 .overflow-fade-left:before{
-  left: 0.3rem;
-  background: linear-gradient(to left, rgba(255,255,255,0) 0%, #FCFDFD 80%, #FCFDFD 100%);
+  left: 0.1rem;
+  background: linear-gradient(to left, rgba(255,255,255,0) 0%, #ffffff 80%, #ffffff 100%);
 }
-/*color set between white and light gray to handle both selected and unselected input fields*/
 .overflow-fade-right:after{
-  right: 0.3rem;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #FCFDFD 80%, #FCFDFD 100%);
-}
-.overflow-fade-pwd-right:after{   
-  right: 2.6rem;
+  right: 0.6rem;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #ffffff 80%, #ffffff 100%);
 }
