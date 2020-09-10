@@ -2,15 +2,13 @@ window.onload = () => {
     let fields = document.querySelectorAll('.fade-field');
 
     fields.forEach(field => {
-        //apply fade effect on load
+        //apply overflow fade on load
         fadeOverflowText(field);
 
-        //apply fade effect on keyup, keydown and touchend
         ['keyup','keydown','touchend'].forEach(event => {
             field.addEventListener(event, () => fadeOverflowText(field));
         });
 
-        //apply fade effect on blur
         field.addEventListener('blur', () => {
             //timeout to let text shift before calculating text overflow
             setTimeout(() => {
@@ -20,7 +18,7 @@ window.onload = () => {
     
     });
 
-    //apply fade effect on selection change
+    //apply overflow fade on selection change
     document.onselectionchange = () => {
         let activeElm = document.activeElement;
         let fieldsArr = Array.from(fields);
