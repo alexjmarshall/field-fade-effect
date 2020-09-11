@@ -15,7 +15,6 @@ window.onload = () => {
                 fadeOverflowText(field);
             },10);
         });
-    
     });
 
     //apply overflow fade on selection change
@@ -25,13 +24,13 @@ window.onload = () => {
         if (fieldsArr.includes(activeElm))
             fadeOverflowText(activeElm);
     };
-
-    function fadeOverflowText(elm) {
-        let parent = elm.parentElement;
-        let overflowLeft = elm.scrollLeft > 0;
-        let overflowRight = elm.scrollWidth - (elm.clientWidth + elm.scrollLeft) > 2;//2px margin of error
-        
-        overflowLeft ? parent.classList.add('overflow-fade-left') : parent.classList.remove('overflow-fade-left');
-        overflowRight ? parent.classList.add('overflow-fade-right') : parent.classList.remove('overflow-fade-right');
-    }
 };
+
+function fadeOverflowText(elm) {
+    let parent = elm.parentElement;
+    let overflowLeft = elm.scrollLeft > 0;
+    let overflowRight = elm.scrollWidth - (elm.clientWidth + elm.scrollLeft) > 2;//2px margin of error
+    
+    overflowLeft ? parent.classList.add('overflow-fade-left') : parent.classList.remove('overflow-fade-left');
+    overflowRight ? parent.classList.add('overflow-fade-right') : parent.classList.remove('overflow-fade-right');
+}
